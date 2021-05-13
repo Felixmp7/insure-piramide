@@ -1,0 +1,77 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "parser": "babel-eslint",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:jsx-a11y/recommended",
+        "plugin:react-hooks/recommended",
+        "airbnb"
+    ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "moduleDirectory": [
+                    "node_modules",
+                    "./"
+                ]
+            }
+        }
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-props-no-spreading": "off",
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "react/prop-types": [
+            2,
+            {
+                "ignore": [
+                    "children"
+                ]
+            }
+        ],
+        "radix": 0,
+        "max-len": [
+            "error",
+            {
+                "code": 180,
+                "ignoreUrls": true,
+                "ignoreComments": true,
+                "ignoreRegExpLiterals": true
+            }
+        ]
+    },
+    "globals": {
+        "React": "writable"
+    }
+}
